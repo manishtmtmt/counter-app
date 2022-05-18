@@ -6,7 +6,7 @@ const Counter = ({ initialValue }) => {
 
   return (
     <div>
-      <h1>Counter App: <span>{count}</span></h1>
+      <h1>Counter App: <span className={(count%2==0) ? styles.green : styles.red}>{count}</span></h1>
       <button onClick={() => setCount(count + 1)}>Increment</button>
       <button
         onClick={() => {
